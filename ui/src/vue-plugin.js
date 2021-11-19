@@ -1,18 +1,17 @@
-import {version} from '../package.json'
-
+// import Component from './components/Component'
 import GeoBtn from './components/GeoBtn.vue'
 
-export {
-  version,
-  GeoBtn
+
+const version = __UI_VERSION__
+
+function install (app) {
+  app.component(GeoBtn.name, GeoBtn)
 
 }
 
-export default {
-    version,
+export {
+  version,
   GeoBtn,
 
-  install(Vue){
-    Vue.component(GeoBtn.name, GeoBtn)
-  }
+  install
 }
